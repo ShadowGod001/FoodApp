@@ -38,3 +38,19 @@
   max-height: 40vh;
   overflow-y: auto; /* Permite scrollear si hay muchas ordenes */
 }
+
+.finalizar-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #28a745;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  position: center;
+}
+
+.finalizar-btn:hover {
+  background-color: #218838;
+}

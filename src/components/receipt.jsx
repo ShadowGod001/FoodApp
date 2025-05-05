@@ -2,7 +2,7 @@ import React from "react";
 import Order from "./order";
 import "./receipt.css";
 
-function Receipt({ orders, removeOrder, removeOneOrder, addOrder, comidas }) {
+function Receipt({ orders, removeOrder, removeOneOrder, addOrder, comidas, finalizarCompra }) {
   const total = orders.reduce(
     (acc, item) => acc + item.price * item.quantity,
     0
@@ -20,10 +20,12 @@ function Receipt({ orders, removeOrder, removeOneOrder, addOrder, comidas }) {
             removeOneOrder={removeOneOrder}
             addOrder={addOrder}
             comida={comidas.find((element) => element.id === order.id)}
+            //finalizarCompra={finalizarCompra}
           />
         ))}
       </div>
       <h3>Total: ${total}</h3>
+      <button onClick={finalizarCompra} className="finalizar-btn">Finalizar compra</button>
     </div>
   );
 }

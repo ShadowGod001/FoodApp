@@ -17,7 +17,11 @@ function Order({
       <span>${order.price * order.quantity}</span>
       <button onClick={() => removeOneOrder(index)}>➖</button>
       <button
-        onClick={() => addOrder(comida)}
+       onClick={() => {
+        console.log("[Order] ➕ clickeado:", order.name);
+        addOrder(comida);
+      }}
+        //onClick={() => addOrder(comida)}
         disabled={comida.stock - order.quantity === 0}
       >
         ➕
